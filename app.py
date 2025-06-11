@@ -7,7 +7,7 @@ modelo = joblib.load('modelo.pkl')
 
 @app.route('/')
 def home():
-    return 'Microservicio de corrección de oficinas'
+    return 'Microservicio de corrección de oficinass'
 
 @app.route('/predict', methods=['POST'])
 def predict():
