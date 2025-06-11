@@ -1,3 +1,4 @@
+
 from flask import Flask, request, jsonify
 import os
 import joblib
@@ -7,7 +8,7 @@ modelo = joblib.load('modelo.pkl')
 
 @app.route('/')
 def home():
-    return 'Microservicio de corrección de oficinass'
+    return 'Microservicio de corrección de oficinas'
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -17,5 +18,5 @@ def predict():
     return jsonify({'corregido': pred})
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Importante para Render
+    port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
